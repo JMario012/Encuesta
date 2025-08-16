@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const renderResults = async () => {
         try {
-            const response = await fetch('http://localhost:3000/api/results');
+            const response = await fetch('https://encuesta-e1p8.onrender.com');
             const data = await response.json();
 
             const votes = {};
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     resetButton.addEventListener('click', async () => {
         try {
-            const response = await fetch('http://localhost:3000/api/votes/reset', {
+            const response = await fetch('https://encuesta-e1p8.onrender.com', {
                 method: 'DELETE'
             });
             if (response.ok) {
