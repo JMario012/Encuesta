@@ -1,0 +1,228 @@
+:root {
+    --purple-main: #583391;
+    --gray-bg: #f0f2f5;
+    --card-bg: #ffffff;
+    
+    --color-jorge-quiroga: #2196f3;
+    --color-samuel-doria: #f44336;
+    --color-rodrigo-paz: #4caf50;
+    --color-manfred-reyes: #ff9800;
+    --color-andronico: #9c27b0;
+    --color-jhonny-fernandez: #795548;
+    --color-eduardo-castillo: #00bcd4;
+    --color-pavel-aracena: #009688;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--gray-bg);
+    color: #333;
+}
+
+.main-header {
+    background-color: var(--card-bg);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--purple-main);
+    letter-spacing: 2px;
+}
+
+.nav-menu .nav-item {
+    color: #555;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-menu .nav-item.active {
+    font-weight: 700;
+    color: var(--purple-main);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.content-header {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    color: var(--purple-main);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.candidates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.candidate-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.candidate-icon {
+    font-size: 1.5rem;
+    color: var(--purple-main);
+}
+
+.candidate-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.candidate-party {
+    font-size: 1rem;
+    color: #777;
+    flex-grow: 1;
+}
+
+.vote-btn {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: transform 0.1s, box-shadow 0.1s;
+    box-shadow: 0 5px 0 0 rgba(0,0,0,0.2);
+}
+
+.vote-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+}
+
+.vote-btn.jorge-quiroga { background-color: var(--color-jorge-quiroga); }
+.vote-btn.samuel-doria { background-color: var(--color-samuel-doria); }
+.vote-btn.rodrigo-paz { background-color: var(--color-rodrigo-paz); }
+.vote-btn.manfred-reyes { background-color: var(--color-manfred-reyes); }
+.vote-btn.andronico-rodriguez { background-color: var(--color-andronico); }
+.vote-btn.jhonny-fernandez { background-color: var(--color-jhonny-fernandez); }
+.vote-btn.eduardo-del-castillo { background-color: var(--color-eduardo-castillo); }
+.vote-btn.pavel-aracena { background-color: var(--color-pavel-aracena); }
+
+.results-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.results-title {
+    text-align: center;
+    color: var(--purple-main);
+}
+
+.votes-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.total-votes {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.reset-btn {
+    background-color: #dc3545;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.results-table-container {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.results-subtitle {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #555;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.results-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.results-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.results-item:last-child {
+    border-bottom: none;
+}
+
+.item-candidate, .item-party, .item-votes, .item-percentage {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.header-candidate, .header-party, .header-votes, .header-percentage {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.header-votes, .header-percentage, .item-votes, .item-percentage {
+    text-align: right;
+}
+.item-votes {
+    font-weight: bold;
+}
